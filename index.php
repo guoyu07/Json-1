@@ -1,12 +1,12 @@
 <?php
-
-require 'include/header.inc.php';
 /*
   <#日期 = "2017-2-17">
   <#时间 = "20:53:50">
   <#人物 = "buff" >
   <#备注 = " ">
  */
+require 'include/header.inc.php';
+
 $json1 = '{"a":1}';
 $en_js1 = json_decode($json1);
 echo "<p><span class='red'>最普通的对象json</span> \$json1='{\"a\":1}'<br/>
@@ -19,7 +19,7 @@ echo "<p><span class='red'>最普通的数组json</span> \$json1='[1]'<br/>
 转换为php变量后===    
 ";
 print_r($en_js2);
-echo '<br/>';
+echo '<span class="purple">数组内貌似不能用关联数组,关联数组可以直接用对象来表示</span><br/>';
 $json3 = '
 {"buff鸽": {"员工": 
                 {"buff": {"职务": "ceo","年龄": 22,"住址": "光明小区"},
